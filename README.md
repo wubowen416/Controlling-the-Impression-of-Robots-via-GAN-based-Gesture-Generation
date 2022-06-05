@@ -23,7 +23,7 @@ data
 
 6. Split train, dev, and test, `python datasets/takekuchi_ext/data_processing/prepare_data.py`
 7. Preprocess dataset `python datasets/takekuchi_ext/data_processing/create_vector.py`
-8. Train model `python main.py wgan takekuchi hparams/defaults.json`
+8. Train model `python main.py wgan takekuchi_ext hparams/defaults.json`
 9. Evaluate the model on test set (which was not used during training)
    1. Copy saved model checkpoint path (in `results/log_date/chkpt`) to `Infer: pre_trained` inside `results/defaults.json`
       ```
@@ -31,10 +31,6 @@ data
         "pre_trained": "results/log_{date}/chkpt/generator_{timestep}k.pt"
       },
       ```
-   2. Execute `python main.py wgan takekuchi hparams/wgan/paper_version.json` to obtain the generated motion in 'synthesized/' and the KDE results.
 
 ## Visualization
 See https://github.com/wubowen416/unity_gesture_visualizer.
-
-## Contact
-For any questions, please contact wu.bowen@irl.sys.es.osaka-u.ac.jp
