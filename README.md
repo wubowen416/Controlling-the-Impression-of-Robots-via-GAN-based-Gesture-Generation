@@ -6,10 +6,9 @@ Official implementation for "Controlling the Impression of Robots via GAN-based 
 
 ## To reproduce
 1. Clone the repository
-2. Execute 'conda env create -f environment.yml' to create a conda environment
-3. Download the dataset from https://www.dropbox.com/sh/j419kp4m8hkt9nd/AAC_pIcS1b_WFBqUp5ofBG1Ia?dl=0
-4. Download the extracted speech features https://drive.google.com/drive/folders/1eISYiVAeRunO4CEXD47GxqPw3bmwJ7fr?usp=sharing
-5. Create a directory `./data/takekuchi/source` and put downloaded data into three directories `motion/`, `speech/` and `speeche_features/`, separately.
+2. Download the dataset from https://www.dropbox.com/sh/j419kp4m8hkt9nd/AAC_pIcS1b_WFBqUp5ofBG1Ia?dl=0
+3. Download the extracted speech features https://drive.google.com/drive/folders/1eISYiVAeRunO4CEXD47GxqPw3bmwJ7fr?usp=sharing
+4. Create a directory `./data/takekuchi/source` and put downloaded data into three directories `motion/`, `speech/` and `speeche_features/`, separately.
 
 ```
 .
@@ -21,10 +20,10 @@ data
       --speech_features
 ```
 
-6. Split train, dev, and test, `python datasets/takekuchi_ext/data_processing/prepare_data.py`
-7. Preprocess dataset `python datasets/takekuchi_ext/data_processing/create_vector.py`
-8. Train model `python main.py wgan takekuchi_ext hparams/defaults.json`
-9. Evaluate the model on test set (which was not used during training)
+5. Split train, dev, and test, `python datasets/takekuchi_ext/data_processing/prepare_data.py`
+6. Preprocess dataset `python datasets/takekuchi_ext/data_processing/create_vector.py`
+7. Train model `python main.py wgan takekuchi_ext hparams/defaults.json`
+8. Evaluate the model on test set (which was not used during training)
    1. Copy saved model checkpoint path (in `results/log_date/chkpt`) to `Infer: pre_trained` inside `results/defaults.json`
       ```
       "Infer": {
