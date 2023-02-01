@@ -1,9 +1,5 @@
 # Controlling-the-Impression-of-Robots-via-GAN-based-GestureGeneration
 
-## Introduction
-
-Official implementation for "Controlling the Impression of Robots via GAN-based GestureGeneration"
-
 ## To reproduce
 1. Clone the repository
 2. Download the dataset from https://www.dropbox.com/sh/j419kp4m8hkt9nd/AAC_pIcS1b_WFBqUp5ofBG1Ia?dl=0
